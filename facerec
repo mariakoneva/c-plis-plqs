@@ -6,10 +6,6 @@ import libcamera
 from picamera2 import MappedArray, Picamera2, Preview
 from picamera2.encoders import H264Encoder
 
-# This is like opencv_face_detect_2.py, only we draw the face boxes on a
-# recorded video. We have to use the "post_callback" to draw the faces because
-# we want capture_buffer to get the image without face boxes, but then we
-# want the boxes drawn before handing the image to the encoder.
 
 face_detector = cv2.CascadeClassifier("/usr/share/opencv4/haarcascades/haarcascade_frontalface_default.xml")
 
